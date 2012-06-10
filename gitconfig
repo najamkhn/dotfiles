@@ -3,8 +3,7 @@
 	email   = najamkhn@gmail.com
 
 [core]
-	repositoryformatversion = 0
-	filemode = true
+	filemode = false
 	bare = false
 	logallrefupdates = true
 	ignorecase = true
@@ -27,7 +26,7 @@
 	autosetuprebase = always
 
 [format]
-	pretty = oneline
+	pretty	= oneline
 	branch  = auto
 	diff    = auto
 	pager   = true

@@ -1,4 +1,4 @@
-all: vim emacs screen
+all: vim emacs screen git 
 
 vim: ./vimrc
 	cp ./vimrc ~/.vimrc
@@ -6,8 +6,8 @@ vim: ./vimrc
 emacs: ./emacs
 	cp ./emacs ~/.emacs
 
-# git: ./gitconfig
-#     cp gitconfig ~/.gitconfig
+git: ./gitconfig
+	cp gitconfig ~/.gitconfig
 
 screen: ./screenrc
 	cp ./screenrc ~/.screenrc
