@@ -18,3 +18,4 @@ Currently builds the following files:
 + screen
 + vim
 + emacs
++ git
