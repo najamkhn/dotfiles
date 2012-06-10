@@ -1,6 +1,6 @@
 ### Build
 
-To build:
+To build all files at once, use:
 ``` 
 make 
 ```
