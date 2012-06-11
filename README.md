@@ -19,3 +19,5 @@ Currently builds the following files:
 + vim
 + emacs
 + git
++ bash
+
