@@ -15,9 +15,9 @@ screen: ./screenrc
 alias: ./aliases
 	cp ./aliases ~/.bash_aliases
 
-osx: ./osx
-	cp ./osx ~/.osx
-	source ./osx
+# osx: ./osx
+#	cp ./osx ~/.osx
+#	source ./osx
 
 bash:
 	cp ./bashrc ~/.bashrc
