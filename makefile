@@ -1,4 +1,4 @@
-all: vim emacs screen git alias bash
+all: vim emacs screen git bash
 
 vim: ./vimrc
 	cp ./vimrc ~/.vimrc
@@ -7,6 +7,7 @@ emacs: ./emacs
 	cp ./emacs ~/.emacs
 
 git: ./gitconfig
+	set -x
 	cp ./gitconfig ~/.gitconfig
 
 screen: ./screenrc

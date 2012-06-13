@@ -7,7 +7,6 @@ alias -- -="cd -"
 # programs
 alias slt='open -a "Sublime Text 2"'
 
-
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
 
