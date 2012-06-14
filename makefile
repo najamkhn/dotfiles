@@ -1,4 +1,4 @@
-all: vimrc screenrc gitrc bashrc
+all: vimrc screenrc gitrc emacsrc bashrc 
 	@echo 'All dotfiles successfully planted'
 
 vimrc: ./vim/vimrc
@@ -12,6 +12,9 @@ screenrc: ./screen/screenrc
 
 alias: ./bash/aliases
 	@cp ./bash/aliases ~/.bash_aliases
+
+emacsrc: ./emacs/emacsrc
+	@cp ./emacs/emacsrc ~/.emacs
 
 # osx: ./osx
 #	cp ./osx ~/.osx
