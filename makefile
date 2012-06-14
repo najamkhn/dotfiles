@@ -1,30 +1,33 @@
 all: vim emacs screen git bash
 
-vim: ./vimrc
-	cp ./vimrc ~/.vimrc
+vim: ./vim/vimrc
+	@cp ./vim/vimrc ~/.vimrc
+	@echo '>> vim configuration files installed'
 
-emacs: ./emacs
-	cp ./emacs ~/.emacs
+# emacs: ./emacs/emacsrc
+# 	@cp ./emacs/emacsrc ~/.emacs
+# 	@echo '>> emacs configuration files installed'
 
-git: ./gitconfig
-	set -x
-	cp ./gitconfig ~/.gitconfig
+git: ./git/gitconfig
+	@cp ./git/gitconfig ~/.gitconfig
+	@echo '>> git configuration files installed'
 
-screen: ./screenrc
-	cp ./screenrc ~/.screenrc
+screen: ./screen/screenrc
+	@cp ./screen/screenrc ~/.screenrc
+	@echo '>> screen configuration files installed'
 
-alias: ./aliases
-	cp ./aliases ~/.bash_aliases
-
+alias: ./bash/aliases
+	@cp ./bash/aliases ~/.bash_aliases
+	@echo '>> bash aliases installed'
 # osx: ./osx
 #	cp ./osx ~/.osx
 #	source ./osx
 
 bash:
-	cp ./bashrc ~/.bashrc
-	cp ./aliases ~/.bash_aliases
-	cp ./prompt ~/.bash_prompt
-	cp ./extra ~/.bash_extra
+	@cp ./bash/bashrc ~/.bashrc
+	@cp ./bash/aliases ~/.bash_aliases
+	@cp ./bash/prompt ~/.bash_prompt
+	@cp ./bash/extra ~/.bash_extra
 
-	source ~/.bashrc
-	echo 'Bash dotfiles successfully updated'
+	@source ~/.bashrc
+	@echo 'Sexy bash installed'

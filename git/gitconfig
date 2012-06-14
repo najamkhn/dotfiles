@@ -23,9 +23,6 @@
 	lg-med  = log --format='medium' --decorate
 	hist    = log --pretty=format:\"%h %ad | [%an] -> %s%d\" --date=short
 
-[branch]
-	autosetuprebase = always
-
 [format]
 	pretty  = oneline
 	branch  = auto

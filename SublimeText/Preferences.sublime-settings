@@ -1,0 +1,13 @@
+{
+    "caret_style": "phase",
+    "color_scheme": "Packages/Phix Color Scheme/Phix Dark.tmTheme",
+    "folder_exclude_patterns":[".svn",".hg","CVS",".git"],
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":["Vintage"],
+    "indent_to_bracket": true,
+    "rulers": [80],
+    "spell_check": true,
+    "translate_tabs_to_spaces": true
+}
+
