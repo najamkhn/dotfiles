@@ -1,40 +1,40 @@
 [user]
-	name    = Najam Khan
-	email   = najamkhn@gmail.com
+name             = Najam Khan
+email            = najamkhn@gmail.com
 
 [core]
-	filemode    = false
-	bare        = false
-	ignorecase  = true
-	autocrlf    = input
-	safecrlf    = true
-	editor      = vim
-	logallrefupdates = true
+filemode         = false
+bare             = false
+ignorecase       = true
+autocrlf         = input
+safecrlf         = true
+editor           = nano
+logallrefupdates = true
 
 [alias]
-	co      = checkout
-	st      = status
-	ci      = commit
-	br      = branch
-	type    = cat-file -t
-	dump    = cat-file -p
-	graph   = log --graph
-	lg      = log --graph --pretty=oneline --abbrev-commit --decorate
-	lg-med  = log --format='medium' --decorate
-	hist    = log --pretty=format:\"%h %ad | [%an] -> %s%d\" --date=short
+co               = checkout
+st               = status
+ci               = commit
+br               = branch
+type             = cat-file -t
+dump             = cat-file -p
+graph            = log --graph
+lg               = log --graph --pretty=oneline --abbrev-commit --decorate
+lg-med           = log --format='medium' --decorate
+hist             = log --pretty=format:\"%h %ad | [%an] -> %s%d\" --date=short
 
 [format]
-	pretty  = oneline
-	branch  = auto
-	diff    = auto
-	pager   = true
-	status  = auto
-    
+pretty           = oneline
+branch           = auto
+diff             = auto
+pager            = true
+status           = auto
+
 [color]
-	ui = true
+ui               = true
 
 [push]
-	default = current
+default          = current
 
 [apply]
-	whitespace = fix
+whitespace       = fix

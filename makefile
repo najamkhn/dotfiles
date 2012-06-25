@@ -1,4 +1,4 @@
-all: vimrc screenrc gitrc emacsrc bashrc 
+all: vimrc screenrc gitrc emacsrc bashrc mysqlrc
 	@echo 'All dotfiles successfully planted'
 
 vimrc: ./vim/vimrc
@@ -19,6 +19,9 @@ emacsrc: ./emacs/emacsrc
 # osx: ./osx
 #	cp ./osx ~/.osx
 #	source ./osx
+
+mysqlrc:
+	@cp ./mysql/my.cnf ~/.my.cnf
 
 bashrc: alias
 	@cp ./bash/bashrc ~/.bashrc
