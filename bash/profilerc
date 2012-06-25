@@ -1,0 +1,2 @@
+# For OSX only, to enable the dotfiles when needed
+echo "alias enable_dotfiles='source ~/.bash/bashrc'" >> ~/.bash_profile
