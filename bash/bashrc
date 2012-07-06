@@ -1,4 +1,7 @@
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+USER_LOCAL=/usr/local/bin:/usr/local/sbin/
+RVM_BIN=$HOME/.rvm/bin/
+
+PATH=$PATH:$USER_LOCAL:$RVM_BIN # Add RVM to PATH for scripting
 
 if [ -f ~/.bash/bash_aliases ]; then
    source ~/.bash/bash_aliases
@@ -11,3 +14,4 @@ fi
 if [ -f ~/.bash/bash_extra ]; then
    source ~/.bash/bash_extra
 fi
+
