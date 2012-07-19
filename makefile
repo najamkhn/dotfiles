@@ -12,9 +12,6 @@ gitrc: ./git/gitconfig
 screenrc: ./screen/screenrc
 	@cp ./screen/screenrc ~/.screenrc
 
-alias: ./bash/aliases
-	@cp ./bash/aliases ~/.bash_aliases
-
 emacsrc: ./emacs/emacsrc
 	@cp ./emacs/emacsrc ~/.emacs
 
@@ -25,18 +22,16 @@ emacsrc: ./emacs/emacsrc
 mysqlrc:
 	@cp ./mysql/my.cnf ~/.my.cnf
 
-bashrc: alias
-	@cp ~/.bashrc ~/.bashrc_old
-	@cp ./bash/aliases ~/.bash_aliases
-
-	@cp ./bash/bashrc ~/.bashrc
-	@cp ./bash/aliases ~/.bash_aliases
-	@cp ./bash/prompt ~/.bash_prompt
-	@cp ./bash/extra ~/.bash_extra
-	@source ~/.bashrc
-
-
 clean:
-	rm ~/.bash_aliases
-	rm ~/.bash_prompt
-	rm ~/.bash_extra
+	@source ~/.bash/cleanup_all
+
+bashrc:
+	@rm -rf ~/.bash
+	@mkdir ~/.bash
+	@cp ./bash/bashrc ~/.bash/bashrc
+	@cp ./bash/aliases ~/.bash/bash_aliases
+	@cp ./bash/prompt ~/.bash/bash_prompt
+	@cp ./bash/extra ~/.bash/bash_extra
+	@cp ./bash/profilerc ~/.bash/profilerc
+	@cp ./bash/cleanup_all ~/.bash/cleanup_all
+	@source ~/.bash/profilerc
