@@ -1,11 +1,16 @@
+#!/bin/bash
+# bash/aliases
+# Created: June 09, 2012 15:19
+# Author: Najam Khan
+# Collection of some helpful aliases that I found in alot of dotfiles, some of
+# them are developed by me and some copied from other scripts that I came
+# across
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
-
-# programs
-alias slt='open -a "Sublime Text 2"'
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
@@ -33,7 +38,6 @@ alias undopush="git push -f origin HEAD^:master"
 
 # hub override.
 # alias git=hub  # not crazy about this..
-
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
@@ -72,6 +76,9 @@ alias g="git"
 alias v="vim"
 alias m="mate ."
 
+# programs
+alias slt='open -a "Sublime Text 2"'
+
 # File size
 alias fs="stat -f \"%z bytes\""
 
@@ -107,6 +114,7 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
+# to enable the sexy bash script.. ZOMG YEAH!
 alias sexy-prompt='source ~/.bash_prompt'
 
 # To set the max number of open files

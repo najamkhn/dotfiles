@@ -8,3 +8,20 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 git config --global user.name "$GIT_AUTHOR_NAME"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# -----
+# Some experimental aliases
+# -----
+
+alias memcached_flush='echo "flush_all" | nc localhost 11211'
+alias whatbranch='git branch | grep "*"'
+alias memc='/usr/local/bin/memcached -d -p 11211'
+alias msqr='mysql.server stop;setmaxfiles;mysql.server start;'
+
+# alias djk="ps auxww | grep manage.py | awk '{print $2}' | xargs kill -9"
+# alias celery.kill="ps auxww | grep celeryd | awk '{print $2}' | xargs kill -9"
+# alias pykill='sudo killall python'
+# alias pycrm="find -name '*pyc' -type f | xargs rm" alias swprm="find -name '*swp' -type f | xargs rm"
+# find . -name '*.pyc' -delete
+
+# git log --shortstat --author "Najam Khan" --since "200 weeks ago" | grep "files changed"  | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "\n\nFiles changed:", files, ", Lines inserted:", inserted, ", Lines deleted:", deleted}'"
