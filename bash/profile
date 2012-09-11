@@ -1,2 +1,0 @@
-# For OSX only, to enable the dotfiles when needed
-alias enable_dotfiles="source ~/.bashrc"

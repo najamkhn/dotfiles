@@ -1,6 +1,6 @@
-[user]
-name             = Najam Khan
-email            = najamkhn@gmail.com
+; [user]
+; name             = Najam Khan
+; email            = najamkhn@gmail.com
 
 [core]
 filemode         = false
