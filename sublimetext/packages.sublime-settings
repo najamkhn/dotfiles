@@ -35,5 +35,30 @@
 		"View In Browser",
 		"YUI Compressor",
 		"ZenCoding"
+		
+		"All Autocomplete",
+		"Codeivate",
+		"CSSLint",
+		"Emmet",
+		"FileSystem Autocompletion",
+		"Gist",
+		"Git",
+		"Git Config",
+		"GitGutter",
+		"Github Tools",
+		"JavaScript Snippets",
+		"jQuery",
+		"LESS",
+		"nginx",
+		"Package Control",
+		"Python Auto-Complete",
+		"Python Coverage",
+		"Sass",
+		"String Counter",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Syntax Highlighting for Sass",
+		"TrailingSpaces",
+		"WordCount"
 	]
 }
