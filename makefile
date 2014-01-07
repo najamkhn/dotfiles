@@ -32,10 +32,10 @@ clean:
 bashrc:
 	@rm -rf ~/.bash
 	@mkdir ~/.bash
-	@cp ./bash/bashrc ~/.bash/bashrc
-	@cp ./bash/aliases ~/.bash/bash_aliases
-	@cp ./bash/prompt ~/.bash/bash_prompt
-	@cp ./bash/extra ~/.bash/bash_extra
-	@cp ./bash/profilerc ~/.bash/profilerc
-	@cp ./bash/cleanup_all ~/.bash/cleanup_all
+	# @cp ./bash/bashrc ~/.bash/bashrc
+	# @cp ./bash/aliases ~/.bash/bash_aliases
+	# @cp ./bash/prompt ~/.bash/bash_prompt
+	# @cp ./bash/extra ~/.bash/bash_extra
+	# @cp ./bash/profilerc ~/.bash/profilerc
+	# @cp ./bash/cleanup_all ~/.bash/cleanup_all
 	@source ~/.bash/profilerc
