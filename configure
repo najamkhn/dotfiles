@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Copyright (C) Najam Khan
+
+# echo $PWD;
+# echo $HOME;
+
+TIMESTAMP=$(date +%s)
+PROJECT_NAME=".basher"/$TIMESTAMP
+BACKUP_FOLDER=".basher_backup"/$TIMESTAMP
+
+PROJECT_DELPOY_PATH=$HOME/$PROJECT_NAME
+PROJECT_BACKUP_PATH=$HOME/$BACKUP_FOLDER
+
+SEARCH_BASHFILES_REGEX=$HOME/.bash*
+
+
+mkdir -p $PROJECT_BACKUP_PATH
+mkdir -p $BACKUP_FOLDER
+
+for files in $SEARCH_BASHFILES_REGEX; do
+    echo "- Copying $(basename "$files") to $PROJECT_DELPOY_PATH/$(basename "$files")"
+    cp -rf $files $PROJECT_DELPOY_PATH/$(basename "$files")
+done
