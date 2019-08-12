@@ -1,0 +1,86 @@
+export LC_ALL=en_US.UTF-8
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+setopt interactivecomments
+
+setphpbrew () {
+    [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+}
+
+enable_nvm () {
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+}
+
+enable_z () {
+    . "/usr/local/etc/profile.d/z.sh";
+}
+
+
+enable_zplug_plugins () {
+    # Supports oh-my-zsh plugins and the like
+    zplug "plugins/gitfast",   from:oh-my-zsh
+
+    # Supports oh-my-zsh plugins and the like
+    zplug "plugins/sublime",   from:oh-my-zsh
+
+    # Also prezto
+    zplug "modules/prompt", from:prezto
+
+    # pretzo utility module
+    zplug "modules/utility", from:prezto
+
+    # Load if "if" tag returns true
+    zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+
+    # Use the package as a command
+    # And accept glob patterns (e.g., brace, wildcard, ...)
+    zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+
+    # Supports checking out a specific branch/tag/commit
+    zplug "b4b4r07/enhancd", at:v1
+    zplug "mollifier/anyframe", at:4c23cb60
+
+    # Load theme file
+    zplug 'dracula/zsh', as:theme
+
+    # Install plugins if there are plugins that have not been installed
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
+    fi
+
+    # Support bitbucket
+    zplug "b4b4r07/hello_bitbucket", \
+        from:bitbucket, \
+        as:command, \
+        use:"*.sh"
+
+    # Then, source plugins and add commands to $PATH
+    zplug load
+
+}
+
+enable_zplug () {
+    export ZPLUG_HOME="/usr/local/opt/zplug";
+    source $ZPLUG_HOME/init.zsh;
+
+    enable_zplug_plugins;
+}
+
+
+runMain () {
+    # Enable Z Directory Module
+    enable_z;
+
+    # Enable ZPlug
+    enable_zplug;
+
+    # Set phpbrew PATH
+    setphpbrew;
+}
+
+
+runMain;
